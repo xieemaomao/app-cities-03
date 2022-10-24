@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-
 plt.style.use('seaborn')
 
 
@@ -15,8 +14,7 @@ population_filter = st.slider('Minimal Population (Millions):', 0.0, 40.0, 4.0) 
 capital_filter = st.sidebar.multiselect(
      'Capital Selector',
      df.capital.unique(),  # options
-     None)  # defaults
-
+     df.capital.unique())  # defaults
 
 # create a input form
 form = st.sidebar.form("country_form")
